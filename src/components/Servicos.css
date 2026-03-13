@@ -1,0 +1,146 @@
+.servicos {
+  padding: 100px 0;
+  background: white;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: #F5F7FA;
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  padding: 36px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2F80ED, #56CCF2);
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+  transform-origin: left;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 40px rgba(30, 58, 95, 0.16);
+  border-color: transparent;
+}
+
+.service-card:hover::after {
+  transform: scaleX(1);
+}
+
+.service-card--featured {
+  background: linear-gradient(140deg, #1E3A5F, #152C4A);
+  border-color: #1E3A5F;
+  color: white;
+}
+
+.service-card--featured h3,
+.service-card--featured p {
+  color: white;
+}
+
+.service-card--featured p {
+  opacity: 0.78;
+}
+
+.service-card--featured::after {
+  transform: scaleX(1);
+}
+
+.service-card--featured .service-link {
+  color: #56CCF2;
+}
+
+.service-featured-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #56CCF2;
+  color: #1E3A5F;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+}
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(47, 128, 237, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #2F80ED;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.service-card--featured .service-icon {
+  background: rgba(86, 204, 242, 0.15);
+  color: #56CCF2;
+}
+
+.service-card:not(.service-card--featured):hover .service-icon {
+  background: #2F80ED;
+  color: white;
+  transform: scale(1.08);
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #828282;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #2F80ED;
+  font-weight: 600;
+  font-size: 0.87rem;
+  transition: all 0.3s ease;
+}
+
+.service-link:hover {
+  gap: 10px;
+}
+
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .servicos {
+    padding: 60px 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
