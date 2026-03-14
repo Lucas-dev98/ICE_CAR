@@ -190,12 +190,12 @@
   text-align: center;
   font-size: 3.2rem;
   margin-bottom: 20px;
-  animation: iconSpin 10s linear infinite;
+  animation: iconFloat 3s ease-in-out infinite;
 }
 
-@keyframes iconSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes iconFloat {
+  0%, 100% { transform: translateX(-30px); }
+  50% { transform: translateX(30px); }
 }
 
 .hero-card-temp {
