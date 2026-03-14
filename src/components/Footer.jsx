@@ -46,10 +46,10 @@ const Footer = () => {
             <div className="footer-col">
               <h4>Contato</h4>
               <div className="footer-contact-list">
-                <p>📍 Rua Exemplo, 123 — Cidade/UF</p>
-                <p>☎️ (00) 0000-0000</p>
-                <p>💬 (00) 9 0000-0000</p>
-                <p>🕐 Seg–Sex: 8h–18h | Sáb: 8h–12h</p>
+                <p>📍 Av. Carlos Lindenberg, 2653 - Planalto, Vila Velha - ES, 29118-376</p>
+                <p>☎️ (27) 99875-5751</p>
+                <p>💬 (27) 99875-5751</p>
+                <p>🕐 Seg–Sex: 8h–18h</p>
               </div>
             </div>
           </div>

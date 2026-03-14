@@ -11,9 +11,6 @@ const Contato = () => {
     mensagem: '',
   });
 
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name === 'telefone') {
@@ -31,7 +28,7 @@ const Contato = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     if (!formData.nome.trim() || !formData.telefone.trim()) {
@@ -39,23 +36,40 @@ const Contato = () => {
       return;
     }
 
-    setLoading(true);
+    // Criar mensagem formatada para o WhatsApp
+    let mensagem = `Olá! Gostaria de solicitar um serviço.\n\n`;
+    mensagem += `*Nome:* ${formData.nome}\n`;
+    mensagem += `*Telefone:* ${formData.telefone}\n`;
     
-    // Simular envio
-    setTimeout(() => {
-      setLoading(false);
-      setSuccess(true);
-      setFormData({
-        nome: '',
-        telefone: '',
-        email: '',
-        veiculo: '',
-        servico: '',
-        mensagem: '',
-      });
-      
-      setTimeout(() => setSuccess(false), 3000);
-    }, 1600);
+    if (formData.email.trim()) {
+      mensagem += `*E-mail:* ${formData.email}\n`;
+    }
+    
+    if (formData.veiculo.trim()) {
+      mensagem += `*Veículo:* ${formData.veiculo}\n`;
+    }
+    
+    if (formData.servico) {
+      mensagem += `*Serviço:* ${formData.servico}\n`;
+    }
+    
+    if (formData.mensagem.trim()) {
+      mensagem += `\n*Mensagem:*\n${formData.mensagem}\n`;
+    }
+
+    // Codificar a mensagem e redirecionar para o WhatsApp
+    const whatsappURL = `https://wa.me/5527998755751?text=${encodeURIComponent(mensagem)}`;
+    window.open(whatsappURL, '_blank');
+
+    // Limpar o formulário
+    setFormData({
+      nome: '',
+      telefone: '',
+      email: '',
+      veiculo: '',
+      servico: '',
+      mensagem: '',
+    });
   };
 
   return (
@@ -76,7 +90,7 @@ const Contato = () => {
                 <div className="contact-item-icon">📍</div>
                 <div>
                   <strong>Endereço</strong>
-                  <span>Rua Exemplo, 123 - Centro<br />Cidade — Estado, CEP 00000-000</span>
+                  <span>Av. Carlos Lindenberg, 2653 - Planalto<br />Vila Velha - ES, 29118-376</span>
                 </div>
               </div>
 
@@ -84,7 +98,7 @@ const Contato = () => {
                 <div className="contact-item-icon">☎️</div>
                 <div>
                   <strong>Telefone</strong>
-                  <span>(00) 0000-0000<br />(00) 9 0000-0000</span>
+                  <span>(27) 99875-5751</span>
                 </div>
               </div>
 
@@ -92,7 +106,7 @@ const Contato = () => {
                 <div className="contact-item-icon whatsapp-icon">💬</div>
                 <div>
                   <strong>WhatsApp</strong>
-                  <span>(00) 9 0000-0000</span>
+                  <span>(27) 99875-5751</span>
                 </div>
               </div>
 
@@ -100,12 +114,25 @@ const Contato = () => {
                 <div className="contact-item-icon">🕐</div>
                 <div>
                   <strong>Horário de Atendimento</strong>
-                  <span>Segunda a Sexta: 8h às 18h<br />Sábado: 8h às 12h</span>
+                  <span>Segunda a Sexta: 8h às 18h</span>
                 </div>
               </div>
             </div>
 
-            <a href="https://wa.me/5500000000000" className="btn btn-whatsapp" target="_blank" rel="noopener">
+            <div className="map-container">
+              <iframe
+                title="Localização ICE CAR"
+                width="100%"
+                height="300"
+                frameBorder="0"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.0631234567896!2d-40.28964!3d-20.34166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19bdb8f5e8e8e8e9%3A0x1234567890abcdef!2sAv.%20Carlos%20Lindenberg%2C%202653%20-%20Planalto%2C%20Vila%20Velha%20-%20ES!5e0!3m2!1spt-BR!2sbr!4v1234567890123"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <a href="https://wa.me/5527998755751" className="btn btn-whatsapp" target="_blank" rel="noopener">
               💬 Chamar no WhatsApp
             </a>
           </div>
@@ -189,10 +216,8 @@ const Contato = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn btn-primary btn-full" disabled={loading}>
-                {loading && '⏳ Enviando...'}
-                {success && '✅ Mensagem Enviada!'}
-                {!loading && !success && '📧 Enviar Mensagem'}
+              <button type="submit" className="btn btn-primary btn-full">
+                📧 Enviar Mensagem via WhatsApp
               </button>
             </form>
           </div>

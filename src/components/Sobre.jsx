@@ -5,29 +5,6 @@ const Sobre = () => {
   const [animatedNiveis, setAnimatedNiveis] = useState({});
   const competenciasRef = useRef(null);
 
-  const timeline = [
-    { 
-      ano: '2004', 
-      evento: 'Fundação da ICE CAR',
-      descricao: 'Iniciativa pioneira em climatização automotiva na região'
-    },
-    { 
-      ano: '2008', 
-      evento: 'Expansão e novos equipamentos',
-      descricao: 'Investimento em tecnologia diagnóstica de ponta'
-    },
-    { 
-      ano: '2015', 
-      evento: 'Certificação ISO - Qualidade',
-      descricao: 'Reconhecimento internacional de excelência operacional'
-    },
-    { 
-      ano: '2023', 
-      evento: 'Diagnóstico Digital avançado',
-      descricao: 'Integração de IA para diagnósticos mais precisos'
-    },
-  ];
-
   const valores = [
     {
       icon: '🎯',
@@ -141,22 +118,6 @@ const Sobre = () => {
                 <span>21 anos servindo com dedicação, profissionalismo e inovação contínua</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Timeline */}
-        <div className="sobre-timeline" data-animate="fade-up">
-          <h3>Nossa Trajetória de Evolução</h3>
-          <div className="timeline">
-            {timeline.map((item, idx) => (
-              <div key={idx} className="timeline-item">
-                <div className="timeline-dot"></div>
-                <div className="timeline-content">
-                  <span className="timeline-ano">{item.ano}</span>
-                  <span className="timeline-evento">{item.evento}</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
 

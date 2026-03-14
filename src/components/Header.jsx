@@ -33,7 +33,6 @@ const Header = forwardRef(function Header(props, ref) {
           </a>
 
           <ul className={`nav-links ${mobileMenuOpen ? 'nav-open' : ''}`}>
-            <li><a href="#inicio" onClick={(e) => scrollToSection(e, 'inicio')}>Início</a></li>
             <li><a href="#sobre" onClick={(e) => scrollToSection(e, 'sobre')}>Sobre</a></li>
             <li><a href="#servicos" onClick={(e) => scrollToSection(e, 'servicos')}>Serviços</a></li>
             <li><a href="#diferenciais" onClick={(e) => scrollToSection(e, 'diferenciais')}>Diferenciais</a></li>

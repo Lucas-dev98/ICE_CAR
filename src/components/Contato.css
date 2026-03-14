@@ -63,6 +63,17 @@
   line-height: 1.55;
 }
 
+.map-container {
+  margin: 32px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(30, 58, 95, 0.15);
+}
+
+.map-container iframe {
+  border-radius: 14px;
+}
+
 .contato-form {
   background: white;
   padding: 44px 40px;
