@@ -1,6 +1,7 @@
 .servicos {
   padding: 100px 0;
   background: white;
+  position: relative;
 }
 
 .services-grid {

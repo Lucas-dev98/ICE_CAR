@@ -82,6 +82,24 @@ const Hero = () => {
               <span>Satisfação</span>
             </div>
           </div>
+
+          <div className="hero-location-bar">
+            <div className="location-item">
+              <span className="location-icon">📍</span>
+              <div>
+                <strong>Nossa Localização</strong>
+                <p>Av. Carlos Lindenberg, 2653 - Planalto, Vila Velha - ES</p>
+              </div>
+            </div>
+            <div className="location-divider"></div>
+            <div className="location-item">
+              <span className="location-icon">🕐</span>
+              <div>
+                <strong>Aberto Agora</strong>
+                <p>Seg-Sex: 8h às 18h | Sab: 8h às 14h</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="hero-visual">

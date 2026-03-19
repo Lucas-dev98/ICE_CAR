@@ -16,6 +16,58 @@
   margin-bottom: 28px;
 }
 
+/* Contact Highlight - Main Location and Hours */
+.contact-highlight {
+  background: linear-gradient(135deg, rgba(86, 204, 242, 0.1), rgba(47, 128, 237, 0.08));
+  border: 2px solid #56CCF2;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 20px rgba(86, 204, 242, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.highlight-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.highlight-icon {
+  font-size: 2.4rem;
+  flex-shrink: 0;
+  min-width: 50px;
+  text-align: center;
+}
+
+.highlight-content h4 {
+  margin: 0 0 10px 0;
+  color: #1E3A5F;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.highlight-content p {
+  margin: 0 0 12px 0;
+  color: #1E3A5F;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.map-link {
+  color: #56CCF2;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.map-link:hover {
+  color: #2BA5D7;
+  transform: translateX(4px);
+}
+
 .contact-items {
   display: flex;
   flex-direction: column;
@@ -28,39 +80,91 @@
   align-items: flex-start;
 }
 
+.contact-item-quick {
+  background: linear-gradient(135deg, rgba(47, 128, 237, 0.08), rgba(86, 204, 242, 0.05));
+  padding: 20px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(86, 204, 242, 0.3);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.contact-item-quick:hover {
+  border-color: #56CCF2;
+  background: linear-gradient(135deg, rgba(86, 204, 242, 0.15), rgba(86, 204, 242, 0.08));
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(86, 204, 242, 0.25);
+}
+
+.contact-item-quick.contact-item-whatsapp:hover {
+  border-color: #25D366;
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.15), rgba(37, 211, 102, 0.08));
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.25);
+}
+
+.contact-item-hours {
+  background: linear-gradient(135deg, rgba(86, 204, 242, 0.08), rgba(47, 128, 237, 0.05));
+  padding: 20px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(86, 204, 242, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact-item-hours:hover {
+  border-color: #56CCF2;
+  background: linear-gradient(135deg, rgba(86, 204, 242, 0.15), rgba(86, 204, 242, 0.08));
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(86, 204, 242, 0.25);
+}
+
 .contact-item-icon {
-  width: 44px;
-  height: 44px;
-  background: rgba(47, 128, 237, 0.1);
-  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #2F80ED, rgba(47, 128, 237, 0.7));
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2F80ED;
+  color: white;
   font-size: 1rem;
   flex-shrink: 0;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 12px rgba(47, 128, 237, 0.25);
 }
 
 .contact-item-icon.whatsapp-icon {
-  background: rgba(37, 211, 102, 0.12);
-  color: #25D366;
+  background: linear-gradient(135deg, #25D366, rgba(37, 211, 102, 0.7));
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }
 
 .contact-item div strong {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #1E3A5F;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .contact-item div span {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
+  color: #1E3A5F;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.contact-item-hours div span {
   color: #4F4F4F;
-  line-height: 1.55;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .map-container {
@@ -79,6 +183,124 @@
   padding: 44px 40px;
   border-radius: 30px;
   box-shadow: 0 4px 20px rgba(30, 58, 95, 0.12);
+}
+
+/* Form Header */
+.form-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #F0F0F0;
+}
+
+.form-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.4rem;
+  color: #1E3A5F;
+}
+
+.form-header p {
+  margin: 0 0 16px 0;
+  color: #56CCF2;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.benefit-item {
+  font-size: 0.9rem;
+  color: #4F4F4F;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.benefit-item::before {
+  content: "";
+  display: inline-block;
+}
+
+/* Quick Contact Section */
+.quick-contact {
+  margin-bottom: 24px;
+}
+
+.quick-contact-label {
+  font-size: 0.85rem;
+  color: #4F4F4F;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.quick-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.quick-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.quick-btn-phone {
+  border-color: #2F80ED;
+  color: #2F80ED;
+  background: rgba(47, 128, 237, 0.1);
+}
+
+.quick-btn-phone:hover {
+  background: #2F80ED;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(47, 128, 237, 0.3);
+}
+
+.quick-btn-whatsapp {
+  border-color: #25D366;
+  color: #25D366;
+  background: rgba(37, 211, 102, 0.1);
+}
+
+.quick-btn-whatsapp:hover {
+  background: #25D366;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* Form Divider */
+.form-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.form-divider::before,
+.form-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #E5E7EB, transparent);
 }
 
 .form-group {
@@ -179,5 +401,41 @@
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .contact-highlight {
+    padding: 20px;
+    margin-bottom: 32px;
+  }
+
+  .highlight-icon {
+    font-size: 2rem;
+    min-width: 40px;
+  }
+
+  .highlight-content h4 {
+    font-size: 1rem;
+  }
+
+  .highlight-content p {
+    font-size: 0.9rem;
+  }
+
+  .form-header {
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+  }
+
+  .form-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .quick-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-btn {
+    padding: 10px 14px;
+    font-size: 0.85rem;
   }
 }

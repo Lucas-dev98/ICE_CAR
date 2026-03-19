@@ -1,6 +1,36 @@
 import './Servicos.css';
+import { useEffect, useRef } from 'react';
 
 const Servicos = () => {
+  const particlesRef = useRef(null);
+
+  useEffect(() => {
+    const createParticle = () => {
+      if (!particlesRef.current) return;
+      const el = document.createElement('div');
+      el.className = 'particle';
+      el.innerHTML = '❄️';
+      
+      const size = Math.random() * 14 + 7;
+      const left = Math.random() * 100;
+      const duration = Math.random() * 14 + 10;
+      const delay = Math.random() * 8;
+
+      el.style.cssText = `
+        left: ${left}%;
+        font-size: ${size}px;
+        animation-duration: ${duration}s;
+        animation-delay: -${delay}s;
+      `;
+
+      particlesRef.current.appendChild(el);
+      setTimeout(() => el.remove(), (duration + delay) * 1000);
+    };
+
+    for (let i = 0; i < 12; i++) createParticle();
+    const interval = setInterval(createParticle, 1800);
+    return () => clearInterval(interval);
+  }, []);
   const servicos = [
     { id: 1, icon: '⛽', title: 'Recarga de Gás', desc: 'Reabastecimento do fluido refrigerante (R134a ou R1234yf) com equipamentos modernos, certificados e calibrados com precisão.' },
     { id: 2, icon: '🔧', title: 'Manutenção Preventiva', desc: 'Revisão completa do sistema de ar-condicionado para evitar problemas futuros e garantir eficiência máxima no verão.', featured: true },
@@ -29,6 +59,14 @@ const Servicos = () => {
               <a href="#contato" className="service-link">Agendar serviço →</a>
             </div>
           ))}
+        </div>
+
+        <div className="section-particles" ref={particlesRef}></div>
+
+        <div className="section-wave">
+          <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,100 L0,100 Z" fill="#F5F7FA" />
+          </svg>
         </div>
       </div>
     </section>

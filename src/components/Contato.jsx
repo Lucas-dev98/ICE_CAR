@@ -83,38 +83,43 @@ const Contato = () => {
 
         <div className="contato-grid">
           <div className="contato-info" data-animate="fade-left">
-            <h3>Informações de Contato</h3>
+            <div className="contact-highlight">
+              <div className="highlight-item">
+                <div className="highlight-icon">📍</div>
+                <div className="highlight-content">
+                  <h4>Nossa Localização</h4>
+                  <p>Av. Carlos Lindenberg, 2653<br/>Planalto, Vila Velha - ES</p>
+                  <a href="https://maps.google.com/?q=Av.+Carlos+Lindenberg,+2653+Vila+Velha" target="_blank" rel="noopener" className="map-link">
+                    Ver no mapa →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <h3>Fale Conosco</h3>
 
             <div className="contact-items">
-              <div className="contact-item">
-                <div className="contact-item-icon">📍</div>
-                <div>
-                  <strong>Endereço</strong>
-                  <span>Av. Carlos Lindenberg, 2653 - Planalto<br />Vila Velha - ES, 29118-376</span>
-                </div>
-              </div>
-
-              <div className="contact-item">
+              <a href="tel:+5527998755751" className="contact-item contact-item-quick">
                 <div className="contact-item-icon">☎️</div>
                 <div>
-                  <strong>Telefone</strong>
+                  <strong>Ligue Agora</strong>
                   <span>(27) 99875-5751</span>
                 </div>
-              </div>
+              </a>
 
-              <div className="contact-item">
+              <a href="https://wa.me/5527998755751" className="contact-item contact-item-quick contact-item-whatsapp" target="_blank" rel="noopener">
                 <div className="contact-item-icon whatsapp-icon">💬</div>
                 <div>
                   <strong>WhatsApp</strong>
                   <span>(27) 99875-5751</span>
                 </div>
-              </div>
+              </a>
 
-              <div className="contact-item">
+              <div className="contact-item contact-item-hours">
                 <div className="contact-item-icon">🕐</div>
                 <div>
-                  <strong>Horário de Atendimento</strong>
-                  <span>Segunda a Sexta: 8h às 18h</span>
+                  <strong>Atendimento</strong>
+                  <span>Seg-Sex: 8h às 18h<br />Sab: 8h às 14h</span>
                 </div>
               </div>
             </div>
@@ -131,13 +136,35 @@ const Contato = () => {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-
-            <a href="https://wa.me/5527998755751" className="btn btn-whatsapp" target="_blank" rel="noopener">
-              💬 Chamar no WhatsApp
-            </a>
           </div>
 
           <div className="contato-form" data-animate="fade-right">
+            <div className="form-header">
+              <h3>Solicite seu Orçamento</h3>
+              <p>Resposta em até 1 hora | Orçamento 100% Grátis</p>
+              <div className="form-benefits">
+                <div className="benefit-item">✓ Diagnóstico incluído</div>
+                <div className="benefit-item">✓ Sem compromisso</div>
+                <div className="benefit-item">✓ Técnicos experientes</div>
+              </div>
+            </div>
+
+            <div className="quick-contact">
+              <p className="quick-contact-label">Ou entre em contato agora:</p>
+              <div className="quick-buttons">
+                <a href="tel:+5527998755751" className="quick-btn quick-btn-phone">
+                  ☎️ Ligar
+                </a>
+                <a href="https://wa.me/5527998755751" className="quick-btn quick-btn-whatsapp" target="_blank" rel="noopener">
+                  💬 WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div className="form-divider">
+              <span>ou preencha o formulário</span>
+            </div>
+
             <form onSubmit={handleSubmit} noValidate>
               <div className="form-group">
                 <label htmlFor="nome">Nome Completo *</label>
@@ -217,7 +244,7 @@ const Contato = () => {
               </div>
 
               <button type="submit" className="btn btn-primary btn-full">
-                📧 Enviar Mensagem via WhatsApp
+                � Solicitar Orçamento Gratuito
               </button>
             </form>
           </div>
