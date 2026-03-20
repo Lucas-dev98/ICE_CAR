@@ -1,8 +1,10 @@
 import './Depoimentos.css';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const Depoimentos = () => {
   const particlesRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoplay, setIsAutoplay] = useState(true);
 
   useEffect(() => {
     const createParticle = () => {
@@ -31,6 +33,7 @@ const Depoimentos = () => {
     const interval = setInterval(createParticle, 1800);
     return () => clearInterval(interval);
   }, []);
+
   const depoimentos = [
     {
       texto: 'Excelente serviço! O ar-condicionado do meu carro estava com problema há meses, e a ICE CAR resolveu em poucas horas. Profissionalismo e preço justo.',
@@ -55,6 +58,40 @@ const Depoimentos = () => {
     },
   ];
 
+  // Auto-advance carousel
+  useEffect(() => {
+    if (!isAutoplay) return;
+    
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % depoimentos.length);
+    }, 5000); // Change every 5 seconds
+
+    return () => clearInterval(timer);
+  }, [isAutoplay, depoimentos.length]);
+
+  const handlePrev = () => {
+    setIsAutoplay(false);
+    setCurrentIndex((prev) => (prev - 1 + depoimentos.length) % depoimentos.length);
+  };
+
+  const handleNext = () => {
+    setIsAutoplay(false);
+    setCurrentIndex((prev) => (prev + 1) % depoimentos.length);
+  };
+
+  const handleDotClick = (idx) => {
+    setIsAutoplay(false);
+    setCurrentIndex(idx);
+  };
+
+  // Resume autoplay after 8 seconds of user interaction
+  useEffect(() => {
+    if (!isAutoplay) {
+      const timer = setTimeout(() => setIsAutoplay(true), 8000);
+      return () => clearTimeout(timer);
+    }
+  }, [isAutoplay]);
+
   return (
     <section className="depoimentos">
       <div className="container">
@@ -64,23 +101,48 @@ const Depoimentos = () => {
           <p>A satisfação dos nossos clientes é o nosso maior reconhecimento</p>
         </div>
 
-        <div className="testimonials-grid">
-          {depoimentos.map((test, idx) => (
-            <div key={idx} className="testimonial-card" data-animate="fade-up">
-              <div className="testimonial-quote">❝</div>
-              <div className="stars">
-                {[...Array(test.stars)].map((_, i) => <span key={i}>⭐</span>)}
-              </div>
-              <p>{test.texto}</p>
-              <div className="testimonial-author">
-                <div className="author-avatar">{test.sigla}</div>
-                <div className="author-info">
-                  <strong>{test.autor}</strong>
-                  <span>{test.desde}</span>
+        <div className="testimonials-carousel">
+          {/* Carousel Container */}
+          <div className="carousel-inner">
+            <div className="carousel-slide active">
+              {depoimentos[currentIndex] && (
+                <div className="testimonial-card" data-animate="fade-up">
+                  <div className="testimonial-quote">❝</div>
+                  <div className="stars">
+                    {[...Array(depoimentos[currentIndex].stars)].map((_, i) => <span key={i}>⭐</span>)}
+                  </div>
+                  <p>{depoimentos[currentIndex].texto}</p>
+                  <div className="testimonial-author">
+                    <div className="author-avatar">{depoimentos[currentIndex].sigla}</div>
+                    <div className="author-info">
+                      <strong>{depoimentos[currentIndex].autor}</strong>
+                      <span>{depoimentos[currentIndex].desde}</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
-          ))}
+          </div>
+
+          {/* Navigation Arrows */}
+          <button className="carousel-arrow carousel-prev" onClick={handlePrev} aria-label="Anterior">
+            ❮
+          </button>
+          <button className="carousel-arrow carousel-next" onClick={handleNext} aria-label="Próximo">
+            ❯
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="carousel-dots">
+            {depoimentos.map((_, idx) => (
+              <button
+                key={idx}
+                className={`carousel-dot ${idx === currentIndex ? 'active' : ''}`}
+                onClick={() => handleDotClick(idx)}
+                aria-label={`Ir para depoimento ${idx + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="section-particles" ref={particlesRef}></div>
