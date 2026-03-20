@@ -103,32 +103,36 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="hero-stats">
-            <div className="hero-stat">
-              <strong>5.000+</strong>
-              <span>Clientes Atendidos</span>
-            </div>
-            <div className="hero-stat-divider"></div>
-            <div className="hero-stat">
-              <strong>21+</strong>
-              <span>Anos de Mercado</span>
-            </div>
-          </div>
-
-          <div className="hero-location-bar">
-            <div className="location-item">
-              <span className="location-icon">📍</span>
-              <div>
-                <strong>Nossa Localização</strong>
-                <p>Av. Carlos Lindenberg, 2653 - Planalto, Vila Velha - ES</p>
+          <div className="hero-info-card">
+            <div className="info-card-row">
+              <div className="info-card-stat">
+                <strong>5.000+</strong>
+                <span>Clientes</span>
+              </div>
+              <div className="info-card-divider"></div>
+              <div className="info-card-stat">
+                <strong>21+</strong>
+                <span>Anos</span>
               </div>
             </div>
-            <div className="location-divider"></div>
-            <div className="location-item">
-              <span className="location-icon">🕐</span>
-              <div>
-                <strong>{openStatus.message}</strong>
-                <p>Seg-Sex: 8h às 18h</p>
+
+            <div className="info-card-row">
+              <div className="info-card-item">
+                <span>📍</span>
+                <div>
+                  <strong>Localização</strong>
+                  <p>Av. Carlos Lindenberg, 2653</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="info-card-row">
+              <div className="info-card-item">
+                <span>🕐</span>
+                <div>
+                  <strong>{openStatus.message}</strong>
+                  <p>Seg-Sex: 8h às 18h</p>
+                </div>
               </div>
             </div>
           </div>
