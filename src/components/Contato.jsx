@@ -278,7 +278,7 @@ const Contato = () => {
               </div>
 
               <button type="submit" className="btn btn-primary btn-full">
-                � Solicitar Orçamento Gratuito
+                ✦ Solicitar Orçamento Gratuito
               </button>
             </form>
           </div>
