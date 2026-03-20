@@ -1,9 +1,7 @@
 import './Sobre.css';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const Sobre = () => {
-  const [animatedNiveis, setAnimatedNiveis] = useState({});
-  const competenciasRef = useRef(null);
   const particlesRef = useRef(null);
 
   const valores = [
@@ -23,45 +21,6 @@ const Sobre = () => {
       descricao: 'Ética profissional, transparência absoluta, responsabilidade social, inovação contínua e compromisso permanente com o desenvolvimento técnico e humano.'
     }
   ];
-
-  const competencias = [
-    { label: 'Qualidade', nivel: 98 },
-    { label: 'Tecnologia', nivel: 95 },
-    { label: 'Atendimento', nivel: 99 },
-    { label: 'Confiabilidade', nivel: 100 },
-  ];
-
-  // Animar barras de competência quando entram em viewport
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            competencias.forEach((comp, idx) => {
-              setTimeout(() => {
-                setAnimatedNiveis((prev) => ({
-                  ...prev,
-                  [idx]: comp.nivel,
-                }));
-              }, idx * 100);
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    if (competenciasRef.current) {
-      observer.observe(competenciasRef.current);
-    }
-
-    return () => {
-      if (competenciasRef.current) {
-        observer.unobserve(competenciasRef.current);
-      }
-    };
-  }, []);
 
   // Criar partículas de neve
   useEffect(() => {
@@ -163,27 +122,6 @@ const Sobre = () => {
                 <div className="valor-icon-large">{valor.icon}</div>
                 <h4>{valor.titulo}</h4>
                 <p>{valor.descricao}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Competências */}
-        <div className="sobre-competencias" ref={competenciasRef} data-animate="fade-up">
-          <div className="section-header-inline">
-            <h3>Nossas Competências</h3>
-            <p>Excelência em cada aspecto do negócio</p>
-          </div>
-          <div className="competencias-grid">
-            {competencias.map((comp, idx) => (
-              <div key={idx} className="competencia-item">
-                <div className="competencia-header">
-                  <span>{comp.label}</span>
-                  <span className="competencia-percent">{animatedNiveis[idx] || 0}%</span>
-                </div>
-                <div className="competencia-bar">
-                  <div className="competencia-fill" style={{ width: `${animatedNiveis[idx] || 0}%` }}></div>
-                </div>
               </div>
             ))}
           </div>
