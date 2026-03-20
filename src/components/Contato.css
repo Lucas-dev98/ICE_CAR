@@ -1073,3 +1073,41 @@
     font-size: 0.85rem;
   }
 }
+
+/* Landscape Mobile (max-height: 500px) */
+@media (max-height: 500px) and (orientation: landscape) {
+  .contato {
+    padding: 40px 0;
+  }
+
+  .contato-form {
+    padding: 20px 24px;
+  }
+
+  .contact-highlight {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-header {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  .map-container {
+    margin-top: 20px;
+  }
+
+  .map-container iframe {
+    height: 180px;
+  }
+
+  .btn-whatsapp {
+    margin-top: 16px;
+    padding: 10px 20px;
+  }
+}
