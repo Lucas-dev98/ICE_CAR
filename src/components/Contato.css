@@ -365,6 +365,414 @@
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
 }
 
+/* ===== RESPONSIVE DESIGN - GRANULAR BREAKPOINTS ===== */
+
+/* Extra Large Screens (1400px+) */
+@media (min-width: 1400px) {
+  .contato {
+    padding: 120px 0;
+  }
+
+  .contato-grid {
+    gap: 80px;
+  }
+
+  .contact-items {
+    gap: 24px;
+    max-width: 580px;
+  }
+
+  .contact-item-quick {
+    padding: 28px 24px;
+  }
+
+  .map-container iframe {
+    height: 400px;
+  }
+}
+
+/* Large Desktops (1200px - 1399px) */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .contato {
+    padding: 110px 0;
+  }
+
+  .contato-grid {
+    gap: 70px;
+  }
+
+  .contact-items {
+    gap: 22px;
+    max-width: 550px;
+  }
+
+  .contact-item-quick {
+    padding: 26px 22px;
+  }
+
+  .map-container iframe {
+    height: 380px;
+  }
+}
+
+/* Medium Desktops (1100px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1100px) {
+  .contato {
+    padding: 100px 0;
+  }
+
+  .contato-grid {
+    gap: 60px;
+  }
+
+  .contact-items {
+    gap: 20px;
+    max-width: 500px;
+  }
+
+  .map-container iframe {
+    height: 360px;
+  }
+}
+
+/* Tablets Large (980px - 1099px) */
+@media (max-width: 1099px) and (min-width: 980px) {
+  .contato {
+    padding: 80px 20px;
+  }
+
+  .contato-grid {
+    gap: 50px;
+  }
+
+  .contato-form {
+    padding: 36px 32px;
+  }
+
+  .contact-items {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    max-width: 100%;
+  }
+
+  .contact-item-quick {
+    padding: 20px 18px;
+  }
+
+  .contact-item-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+  }
+
+  .highlight-icon {
+    font-size: 2.2rem;
+  }
+
+  .contact-item div strong {
+    font-size: 0.75rem;
+  }
+
+  .contact-item div span {
+    font-size: 0.9rem;
+  }
+
+  .form-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 11px 15px;
+    font-size: 0.88rem;
+  }
+
+  .map-container iframe {
+    height: 340px;
+  }
+}
+
+/* Tablets Medium (890px - 979px) */
+@media (max-width: 979px) and (min-width: 890px) {
+  .contato {
+    padding: 70px 20px;
+  }
+
+  .contato-grid {
+    gap: 40px;
+  }
+
+  .contato-form {
+    padding: 32px 28px;
+  }
+
+  .contact-items {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .contact-item-quick {
+    padding: 18px 16px;
+  }
+
+  .contact-item-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.35rem;
+  }
+
+  .highlight-icon {
+    font-size: 2.1rem;
+  }
+
+  .highlight-content h4 {
+    font-size: 1rem;
+  }
+
+  .contact-item div strong {
+    font-size: 0.73rem;
+  }
+
+  .form-group label {
+    font-size: 0.79rem;
+  }
+
+  .map-container iframe {
+    height: 320px;
+  }
+}
+
+/* Tablets Small (768px - 889px) */
+@media (max-width: 889px) and (min-width: 768px) {
+  .contato {
+    padding: 60px 20px;
+  }
+
+  .contato-grid {
+    gap: 30px;
+  }
+
+  .contato-form {
+    padding: 28px 24px;
+  }
+
+  .contact-items {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-item-quick {
+    padding: 18px 16px;
+  }
+
+  .contact-item-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+
+  .form-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .form-group label {
+    font-size: 0.78rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+
+  .map-container {
+    margin-top: 40px;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+}
+
+/* Mobile Large (480px - 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .contato {
+    padding: 50px 16px;
+  }
+
+  .contato-grid {
+    gap: 24px;
+  }
+
+  .contato-form {
+    padding: 24px 20px;
+  }
+
+  .contact-items {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .contact-item-quick {
+    padding: 16px 14px;
+  }
+
+  .contact-item-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.25rem;
+  }
+
+  .contact-item div strong {
+    font-size: 0.7rem;
+  }
+
+  .contact-item div span {
+    font-size: 0.85rem;
+  }
+
+  .highlight-icon {
+    font-size: 2rem;
+  }
+
+  .highlight-content h4 {
+    font-size: 0.95rem;
+  }
+
+  .highlight-content p {
+    font-size: 0.85rem;
+  }
+
+  .form-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .form-header p {
+    font-size: 0.8rem;
+  }
+
+  .form-group label {
+    font-size: 0.75rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+
+  .form-group textarea {
+    min-height: 80px;
+  }
+
+  .btn-whatsapp {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .map-container {
+    margin-top: 32px;
+  }
+
+  .map-container iframe {
+    height: 280px;
+  }
+}
+
+/* Mobile Extra Small (< 480px) */
+@media (max-width: 479px) {
+  .contato {
+    padding: 40px 12px;
+  }
+
+  .contato-grid {
+    gap: 20px;
+  }
+
+  .contato-form {
+    padding: 20px 16px;
+  }
+
+  .contact-items {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-item-quick {
+    padding: 14px 12px;
+  }
+
+  .contact-item-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+
+  .contact-item div strong {
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+  }
+
+  .contact-item div span {
+    font-size: 0.8rem;
+  }
+
+  .highlight-icon {
+    font-size: 1.8rem;
+    min-width: 35px;
+  }
+
+  .highlight-content h4 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .highlight-content p {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .form-header h3 {
+    font-size: 1rem;
+  }
+
+  .form-header p {
+    font-size: 0.75rem;
+  }
+
+  .form-group label {
+    font-size: 0.7rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .form-group textarea {
+    min-height: 70px;
+  }
+
+  .btn-whatsapp {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  .map-container {
+    margin-top: 28px;
+  }
+
+  .map-container iframe {
+    height: 240px;
+  }
+}
+
 @media (max-width: 1100px) {
   .contato-grid {
     grid-template-columns: 1fr;
