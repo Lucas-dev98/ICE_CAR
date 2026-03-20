@@ -1,8 +1,52 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Hero.css';
 
 const Hero = () => {
   const particlesRef = useRef(null);
+  const [openStatus, setOpenStatus] = useState({ isOpen: false, message: '' });
+
+  // Função para verificar se está aberto agora
+  const getOpenStatus = () => {
+    const now = new Date();
+    const day = now.getDay(); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const currentTime = hours + minutes / 60;
+
+    let isOpen = false;
+    let message = '';
+
+    // Verifica se é sábado (6) ou domingo (0) - sempre fechado
+    if (day === 0 || day === 6) {
+      message = 'Fechado - Reabre segunda às 8h';
+      isOpen = false;
+    } 
+    // Segunda a Sexta - 8h às 18h
+    else if (currentTime >= 8 && currentTime < 18) {
+      message = 'Aberto Agora';
+      isOpen = true;
+    } 
+    else if (currentTime < 8) {
+      message = 'Fechado - Abre às 8h';
+      isOpen = false;
+    } 
+    else {
+      // Depois das 18h
+      message = 'Fechado - Reabre amanhã às 8h';
+      isOpen = false;
+    }
+
+    return { isOpen, message };
+  };
+
+  useEffect(() => {
+    setOpenStatus(getOpenStatus());
+    const interval = setInterval(() => {
+      setOpenStatus(getOpenStatus());
+    }, 60000); // Atualiza a cada minuto
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const createParticle = () => {
@@ -42,10 +86,6 @@ const Hero = () => {
 
       <div className="container hero-container">
         <div className="hero-content">
-          <div className="hero-badge">
-            🏆 21 Anos de Excelência no Mercado
-          </div>
-
           <h1>
             Especialistas em<br />
             <span className="highlight">Ar-Condicionado</span><br />
@@ -68,18 +108,13 @@ const Hero = () => {
 
           <div className="hero-stats">
             <div className="hero-stat">
-              <strong>21+</strong>
-              <span>Anos de Mercado</span>
-            </div>
-            <div className="hero-stat-divider"></div>
-            <div className="hero-stat">
               <strong>5.000+</strong>
               <span>Clientes Atendidos</span>
             </div>
             <div className="hero-stat-divider"></div>
             <div className="hero-stat">
-              <strong>98%</strong>
-              <span>Satisfação</span>
+              <strong>21+</strong>
+              <span>Anos de Mercado</span>
             </div>
           </div>
 
@@ -95,8 +130,8 @@ const Hero = () => {
             <div className="location-item">
               <span className="location-icon">🕐</span>
               <div>
-                <strong>Aberto Agora</strong>
-                <p>Seg-Sex: 8h às 18h | Sab: 8h às 14h</p>
+                <strong>{openStatus.message}</strong>
+                <p>Seg-Sex: 8h às 18h</p>
               </div>
             </div>
           </div>

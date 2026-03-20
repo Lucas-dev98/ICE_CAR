@@ -122,6 +122,39 @@
   box-shadow: 0 8px 24px rgba(86, 204, 242, 0.25);
 }
 
+/* Status dos Horários */
+.hours-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.hours-status.open {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.15), rgba(37, 211, 102, 0.08));
+  color: #16A34A;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+}
+
+.hours-status.closed {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(239, 68, 68, 0.06));
+  color: #DC2626;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.hours-schedule {
+  display: block;
+  font-size: 0.85rem;
+  color: #6B7280 !important;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
 .contact-item-icon {
   width: 48px;
   height: 48px;

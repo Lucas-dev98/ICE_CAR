@@ -129,10 +129,10 @@ const Sobre = () => {
 
           <div className="sobre-content" data-animate="fade-right">
             <div className="section-label">Quem Somos</div>
-            <h2>Referência em Climatização Automotiva há <span className="highlight">21 Anos</span></h2>
+            <h2>Excelência em <span className="highlight">Climatização Automotiva</span></h2>
             <p>
-              Desde 2004, a ICE CAR consolidou-se como referência de confiabilidade e excelência no mercado de climatização automotiva. 
-              Com mais de duas décadas de experiência, acumulamos conhecimento técnico profundo e expertise que nos permite oferecer 
+              A ICE CAR consolidou-se como referência de confiabilidade e excelência no mercado de climatização automotiva. 
+              Com sólida experiência, acumulamos conhecimento técnico profundo e expertise que nos permite oferecer 
               diagnósticos precisos, soluções inovadoras e atendimento excepcional a cada cliente.
             </p>
             <p>
@@ -145,7 +145,7 @@ const Sobre = () => {
               <div className="highlight-icon">✨</div>
               <div className="highlight-content">
                 <strong>Compromisso com Excelência</strong>
-                <span>21 anos servindo com dedicação, profissionalismo e inovação contínua</span>
+                <span>Dedicação, profissionalismo e inovação contínua</span>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Contato.css';
 
 const Contato = () => {
@@ -10,6 +10,52 @@ const Contato = () => {
     servico: '',
     mensagem: '',
   });
+
+  // Função para verificar se está aberto agora
+  const getOpenStatus = () => {
+    const now = new Date();
+    const day = now.getDay(); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const currentTime = hours + minutes / 60;
+
+    let isOpen = false;
+    let message = '';
+
+    // Verifica se é sábado (6) ou domingo (0) - sempre fechado
+    if (day === 0 || day === 6) {
+      message = 'Fechado - Reabre segunda às 8h';
+      isOpen = false;
+    } 
+    // Segunda a Sexta - 8h às 18h
+    else if (currentTime >= 8 && currentTime < 18) {
+      message = 'Aberto Agora';
+      isOpen = true;
+    } 
+    else if (currentTime < 8) {
+      message = 'Fechado - Abre às 8h';
+      isOpen = false;
+    } 
+    else {
+      // Depois das 18h
+      message = 'Fechado - Reabre amanhã às 8h';
+      isOpen = false;
+    }
+
+    return { isOpen, message };
+  };
+
+  const [openStatus, setOpenStatus] = useState(getOpenStatus());
+
+  // Atualizar status a cada minuto
+  useEffect(() => {
+    setOpenStatus(getOpenStatus());
+    const interval = setInterval(() => {
+      setOpenStatus(getOpenStatus());
+    }, 60000); // Atualiza a cada minuto
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -119,7 +165,10 @@ const Contato = () => {
                 <div className="contact-item-icon">🕐</div>
                 <div>
                   <strong>Atendimento</strong>
-                  <span>Seg-Sex: 8h às 18h<br />Sab: 8h às 14h</span>
+                  <span className={`hours-status ${openStatus.isOpen ? 'open' : 'closed'}`}>
+                    {openStatus.message}
+                  </span>
+                  <span className="hours-schedule">Seg-Sex: 8h às 18h</span>
                 </div>
               </div>
             </div>
@@ -141,7 +190,7 @@ const Contato = () => {
           <div className="contato-form" data-animate="fade-right">
             <div className="form-header">
               <h3>Solicite seu Orçamento</h3>
-              <p>Resposta em até 1 hora | Orçamento 100% Grátis</p>
+              <p>Orçamento 100% Grátis</p>
               <div className="form-benefits">
                 <div className="benefit-item">✓ Diagnóstico incluído</div>
                 <div className="benefit-item">✓ Sem compromisso</div>
