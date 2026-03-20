@@ -106,7 +106,7 @@ const Hero = () => {
           <div className="hero-info-card">
             <div className="info-card-row">
               <div className="info-card-stat">
-                <strong>21+</strong>
+                <strong>20+</strong>
                 <span>Anos</span>
               </div>
               <div className="info-card-divider"></div>

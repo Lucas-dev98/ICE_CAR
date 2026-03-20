@@ -58,7 +58,7 @@ const Sobre = () => {
         <div className="sobre-grid">
           <div className="sobre-visual" data-animate="fade-left">
             <div className="anos-badge">
-              <span className="anos-numero">21</span>
+              <span className="anos-numero">20+</span>
               <span className="anos-texto">Anos de<br />Experiência</span>
             </div>
             <div className="sobre-mini-cards">
