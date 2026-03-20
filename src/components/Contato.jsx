@@ -198,22 +198,6 @@ const Contato = () => {
               </div>
             </div>
 
-            <div className="quick-contact">
-              <p className="quick-contact-label">Ou entre em contato agora:</p>
-              <div className="quick-buttons">
-                <a href="tel:+5527998755751" className="quick-btn quick-btn-phone">
-                  ☎️ Ligar
-                </a>
-                <a href="https://wa.me/5527998755751" className="quick-btn quick-btn-whatsapp" target="_blank" rel="noopener">
-                  💬 WhatsApp
-                </a>
-              </div>
-            </div>
-
-            <div className="form-divider">
-              <span>ou preencha o formulário</span>
-            </div>
-
             <form onSubmit={handleSubmit} noValidate>
               <div className="form-group">
                 <label htmlFor="nome">Nome Completo *</label>
