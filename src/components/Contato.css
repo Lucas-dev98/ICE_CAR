@@ -370,8 +370,20 @@
     grid-template-columns: 1fr;
   }
 
+  .contato-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-items {
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 890px) {
   .contact-items {
     grid-template-columns: 1fr;
+    max-width: 100%;
   }
 }
 
@@ -385,6 +397,14 @@
   }
 
   .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-items {
     grid-template-columns: 1fr;
   }
 
