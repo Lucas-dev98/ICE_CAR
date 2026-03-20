@@ -101,9 +101,6 @@ const Hero = () => {
             <a href="#contato" className="btn btn-primary btn-lg">
               📅 Agendar Serviço
             </a>
-            <a href="#servicos" className="btn btn-outline btn-lg">
-              🔧 Nossos Serviços
-            </a>
           </div>
 
           <div className="hero-stats">
