@@ -686,20 +686,31 @@
 /* Mobile Extra Small (< 480px) */
 @media (max-width: 479px) {
   .contato {
-    padding: 40px 12px;
+    padding: 40px 8px;
+    box-sizing: border-box;
   }
 
   .contato-grid {
     gap: 20px;
   }
 
+  .contato-info {
+    box-sizing: border-box;
+  }
+
   .contato-form {
-    padding: 20px 16px;
+    padding: 20px 14px;
+    box-sizing: border-box;
+  }
+
+  .contact-highlight {
+    box-sizing: border-box;
   }
 
   .contact-items {
     grid-template-columns: 1fr;
     gap: 12px;
+    box-sizing: border-box;
   }
 
   .contact-item-quick {
@@ -753,6 +764,7 @@
   .form-group textarea {
     padding: 8px 12px;
     font-size: 0.8rem;
+    box-sizing: border-box;
   }
 
   .form-group textarea {
