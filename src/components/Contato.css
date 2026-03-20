@@ -121,12 +121,17 @@
 
 .contact-item-quick:active {
   transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(47, 128, 237, 0.15);
 }
 
 .contact-item-quick.contact-item-whatsapp:hover {
   border-color: #25D366;
   background: linear-gradient(135deg, rgba(37, 211, 102, 0.15), rgba(37, 211, 102, 0.08));
   box-shadow: 0 12px 32px rgba(37, 211, 102, 0.25);
+}
+
+.contact-item-quick.contact-item-whatsapp:active {
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.15);
 }
 
 .contact-item-hours {
@@ -147,6 +152,11 @@
   background: linear-gradient(135deg, rgba(86, 204, 242, 0.15), rgba(86, 204, 242, 0.08));
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(86, 204, 242, 0.25);
+}
+
+.contact-item-hours:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(86, 204, 242, 0.15);
 }
 
 /* Status dos Horários */
@@ -217,12 +227,13 @@
   letter-spacing: 0.8px;
   margin-bottom: 6px;
   font-family: 'Poppins', sans-serif;
+  line-height: 1.3;
 }
 
 .contact-item div span {
   font-size: 0.95rem;
   color: #1E3A5F;
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 700;
 }
 
@@ -344,6 +355,7 @@
 .form-group textarea {
   resize: vertical;
   min-height: 100px;
+  line-height: 1.6;
 }
 
 .btn-full {
@@ -381,6 +393,7 @@
 
 .btn-whatsapp:active {
   transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.2);
 }
 
 /* ===== RESPONSIVE DESIGN - GRANULAR BREAKPOINTS ===== */
