@@ -71,7 +71,7 @@ const Hero = () => {
       setTimeout(() => el.remove(), (duration + delay) * 1000);
     };
 
-    for (let i = 0; i < 18; i++) createParticle();
+    for (let i = 0; i < 0; i++) createParticle();
     const interval = setInterval(createParticle, 1800);
     return () => clearInterval(interval);
   }, []);
