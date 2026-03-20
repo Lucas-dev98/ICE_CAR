@@ -1,12 +1,8 @@
-import { forwardRef, useState } from 'react';
+import { forwardRef, useState, useEffect } from 'react';
 import './Header.css';
 
 const Header = forwardRef(function Header(props, ref) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
 
   const closeMenu = () => {
     setMobileMenuOpen(false);
@@ -23,6 +19,40 @@ const Header = forwardRef(function Header(props, ref) {
     }
   };
 
+  // Prevenir scroll quando menu está aberto
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
+  // Fechar menu ao pressionar ESC
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && mobileMenuOpen) {
+        closeMenu();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [mobileMenuOpen]);
+
+  // Fechar menu ao redimensionar
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        closeMenu();
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <header id="header" ref={ref}>
       <nav className="navbar">
@@ -32,21 +62,19 @@ const Header = forwardRef(function Header(props, ref) {
             <span className="logo-text">ICE<strong>CAR</strong></span>
           </a>
 
-          <ul className={`nav-links ${mobileMenuOpen ? 'nav-open' : ''}`}>
+          <ul className={`nav-links ${mobileMenuOpen ? 'nav-open' : ''}`} id="nav-menu">
             <li><a href="#sobre" onClick={(e) => scrollToSection(e, 'sobre')}>Sobre</a></li>
             <li><a href="#servicos" onClick={(e) => scrollToSection(e, 'servicos')}>Serviços</a></li>
             <li><a href="#diferenciais" onClick={(e) => scrollToSection(e, 'diferenciais')}>Diferenciais</a></li>
             <li><a href="#contato" onClick={(e) => scrollToSection(e, 'contato')}>Contato</a></li>
           </ul>
 
-          <a href="#contato" className="btn btn-primary nav-cta" onClick={(e) => scrollToSection(e, 'contato')}>
-            📅 Solicitar Orçamento
-          </a>
-
           <button 
             className={`hamburger ${mobileMenuOpen ? 'active' : ''}`}
-            onClick={toggleMenu}
-            aria-label="Abrir menu"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="nav-menu"
           >
             <span></span>
             <span></span>
@@ -54,6 +82,14 @@ const Header = forwardRef(function Header(props, ref) {
           </button>
         </div>
       </nav>
+
+      {mobileMenuOpen && (
+        <div 
+          className="nav-overlay" 
+          onClick={closeMenu}
+          aria-hidden="true"
+        />
+      )}
     </header>
   );
 });

@@ -2,6 +2,10 @@
   padding: 100px 0;
   background: white;
   position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .testimonials-grid {

@@ -2,6 +2,10 @@
   padding: 100px 0;
   background: #F5F7FA;
   position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .diferenciais-grid {
