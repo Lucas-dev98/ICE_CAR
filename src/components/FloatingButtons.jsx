@@ -29,7 +29,7 @@ const FloatingButtons = () => {
         </button>
       )}
 
-      <a href="https://wa.me/5500000000000" className="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <a href="https://wa.me/5527998755751" className="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
         💬
         <span className="whatsapp-pulse"></span>
       </a>
