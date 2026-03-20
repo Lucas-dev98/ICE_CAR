@@ -49,7 +49,6 @@ const Contato = () => {
 
   // Atualizar status a cada minuto
   useEffect(() => {
-    setOpenStatus(getOpenStatus());
     const interval = setInterval(() => {
       setOpenStatus(getOpenStatus());
     }, 60000); // Atualiza a cada minuto

@@ -3,7 +3,6 @@ import './Hero.css';
 
 const Hero = () => {
   const particlesRef = useRef(null);
-  const [openStatus, setOpenStatus] = useState({ isOpen: false, message: '' });
 
   // Função para verificar se está aberto agora
   const getOpenStatus = () => {
@@ -39,8 +38,9 @@ const Hero = () => {
     return { isOpen, message };
   };
 
+  const [openStatus, setOpenStatus] = useState(getOpenStatus());
+
   useEffect(() => {
-    setOpenStatus(getOpenStatus());
     const interval = setInterval(() => {
       setOpenStatus(getOpenStatus());
     }, 60000); // Atualiza a cada minuto
