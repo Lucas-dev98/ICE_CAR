@@ -347,6 +347,13 @@
   box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1);
 }
 
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 2px solid #2F80ED;
+  outline-offset: 2px;
+}
+
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: #BDC3CF;
