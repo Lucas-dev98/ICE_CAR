@@ -159,6 +159,22 @@
   margin: 0;
 }
 
+.contact-phone-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-phone-link:hover {
+  color: #56CCF2;
+  padding-left: 6px;
+}
+
 /* Footer Bottom */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);

@@ -47,7 +47,9 @@ const Footer = () => {
                 </div>
                 <div className="contact-item">
                   <span className="contact-icon">☎️</span>
-                  <p>(27) 99875-5751</p>
+                  <a href="https://wa.me/5527998755751" target="_blank" rel="noopener" className="contact-phone-link">
+                    (27) 99875-5751
+                  </a>
                 </div>
                 <div className="contact-item">
                   <span className="contact-icon">🕐</span>
