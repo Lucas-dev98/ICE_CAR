@@ -107,6 +107,9 @@
   align-items: center;
   text-align: center;
   box-shadow: 0 2px 12px rgba(47, 128, 237, 0.1);
+  min-height: 140px;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .contact-item-quick:hover {
@@ -114,6 +117,10 @@
   background: linear-gradient(135deg, rgba(86, 204, 242, 0.15), rgba(86, 204, 242, 0.08));
   transform: translateY(-6px);
   box-shadow: 0 12px 32px rgba(47, 128, 237, 0.2);
+}
+
+.contact-item-quick:active {
+  transform: translateY(-2px);
 }
 
 .contact-item-quick.contact-item-whatsapp:hover {
@@ -316,6 +323,8 @@
   color: #4F4F4F;
   background: #F5F7FA;
   transition: all 0.3s ease;
+  min-height: 44px;
+  line-height: 1.6;
 }
 
 .form-group input:focus,
@@ -357,12 +366,21 @@
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
+  min-height: 48px;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-whatsapp:hover {
   background: #1eb857;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:active {
+  transform: translateY(0);
 }
 
 /* ===== RESPONSIVE DESIGN - GRANULAR BREAKPOINTS ===== */
@@ -716,6 +734,7 @@
 
   .contact-item-quick {
     padding: 16px 14px;
+    min-height: 130px;
   }
 
   .contact-item-icon {
@@ -766,6 +785,7 @@
     padding: 9px 13px;
     font-size: 0.83rem;
     box-sizing: border-box;
+    min-height: 44px;
   }
 
   .form-group textarea {
@@ -775,6 +795,7 @@
   .btn-whatsapp {
     padding: 11px 22px;
     font-size: 0.88rem;
+    min-height: 44px;
   }
 
   .map-container {
@@ -819,6 +840,7 @@
 
   .contact-item-quick {
     padding: 12px 10px;
+    min-height: 120px;
   }
 
   .contact-item-icon {
@@ -899,6 +921,7 @@
     font-size: 0.75rem;
     box-sizing: border-box;
     border-radius: 6px;
+    min-height: 44px;
   }
 
   .form-row {
@@ -913,6 +936,7 @@
     padding: 9px 18px;
     font-size: 0.8rem;
     margin-top: 20px;
+    min-height: 44px;
   }
 
   .map-container {
