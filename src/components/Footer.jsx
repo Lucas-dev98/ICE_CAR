@@ -1,4 +1,5 @@
 import './Footer.css';
+import LogoPng from '../assets/logo-icecar.png';
 
 const Footer = () => {
   return (
@@ -9,8 +10,7 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="footer-brand">
               <a href="#inicio" className="logo">
-                <span className="logo-icon">❄️</span>
-                <span className="logo-text">ICE<strong>CAR</strong></span>
+                <img src={LogoPng} alt="ICE CAR - Ar Condicionado Automotivo" className="logo-image" />
               </a>
               <p>Especialistas em ar-condicionado automotivo há 21 anos. Qualidade, tecnologia e confiança para manter você sempre na temperatura ideal.</p>
               <div className="social-links">

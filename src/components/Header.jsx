@@ -1,5 +1,6 @@
 import { forwardRef, useState, useEffect } from 'react';
 import './Header.css';
+import LogoPng from '../assets/logo-icecar.png';
 
 const Header = forwardRef(function Header(props, ref) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -58,8 +59,7 @@ const Header = forwardRef(function Header(props, ref) {
       <nav className="navbar">
         <div className="container nav-container">
           <a href="#inicio" className="logo" onClick={(e) => scrollToSection(e, 'inicio')}>
-            <span className="logo-icon">❄️</span>
-            <span className="logo-text">ICE<strong>CAR</strong></span>
+              <img src={LogoPng} alt="ICE CAR - Ar Condicionado Automotivo" className="logo-image" />
           </a>
 
           <ul className={`nav-links ${mobileMenuOpen ? 'nav-open' : ''}`} id="nav-menu">

@@ -13,6 +13,18 @@
   font-size: 1.55rem;
   flex-shrink: 0;
   cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .logo-icon {
