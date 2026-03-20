@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import './Contato.css';
 
 const Contato = () => {
@@ -12,7 +12,7 @@ const Contato = () => {
   });
 
   // Função para verificar se está aberto agora
-  const getOpenStatus = () => {
+  const getOpenStatus = useCallback(() => {
     const now = new Date();
     const day = now.getDay(); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
     const hours = now.getHours();
@@ -43,7 +43,7 @@ const Contato = () => {
     }
 
     return { isOpen, message };
-  };
+  }, []);
 
   const [openStatus, setOpenStatus] = useState(getOpenStatus());
 
@@ -54,7 +54,7 @@ const Contato = () => {
     }, 60000); // Atualiza a cada minuto
 
     return () => clearInterval(interval);
-  }, []);
+  }, [getOpenStatus]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
