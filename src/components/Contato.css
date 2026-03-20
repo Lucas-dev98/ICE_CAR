@@ -683,8 +683,8 @@
   }
 }
 
-/* Mobile Extra Small (< 480px) */
-@media (max-width: 479px) {
+/* Mobile Extra Small (380px - 479px) */
+@media (max-width: 479px) and (min-width: 380px) {
   .contato {
     padding: 40px 8px;
     box-sizing: border-box;
@@ -705,6 +705,7 @@
 
   .contact-highlight {
     box-sizing: border-box;
+    padding: 18px;
   }
 
   .contact-items {
@@ -714,74 +715,223 @@
   }
 
   .contact-item-quick {
-    padding: 14px 12px;
+    padding: 16px 14px;
   }
 
   .contact-item-icon {
-    width: 44px;
-    height: 44px;
-    font-size: 1.2rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
   }
 
   .contact-item div strong {
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
+    font-size: 0.7rem;
+    letter-spacing: 0.6px;
   }
 
   .contact-item div span {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .highlight-icon {
-    font-size: 1.8rem;
-    min-width: 35px;
+    font-size: 2rem;
+    min-width: 40px;
   }
 
   .highlight-content h4 {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-bottom: 8px;
   }
 
   .highlight-content p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     margin-bottom: 8px;
   }
 
   .form-header h3 {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .form-header p {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 
   .form-group label {
-    font-size: 0.7rem;
+    font-size: 0.73rem;
   }
 
   .form-group input,
   .form-group select,
   .form-group textarea {
-    padding: 8px 12px;
-    font-size: 0.8rem;
+    padding: 9px 13px;
+    font-size: 0.83rem;
     box-sizing: border-box;
   }
 
   .form-group textarea {
-    min-height: 70px;
+    min-height: 75px;
   }
 
   .btn-whatsapp {
-    padding: 10px 20px;
-    font-size: 0.85rem;
+    padding: 11px 22px;
+    font-size: 0.88rem;
   }
 
   .map-container {
-    margin-top: 28px;
+    margin-top: 30px;
   }
 
   .map-container iframe {
-    height: 240px;
+    height: 260px;
+  }
+}
+
+/* Mobile Very Small (320px - 379px) */
+@media (max-width: 379px) {
+  .contato {
+    padding: 30px 6px;
+    box-sizing: border-box;
+  }
+
+  .contato-grid {
+    gap: 16px;
+  }
+
+  .contato-info {
+    box-sizing: border-box;
+  }
+
+  .contato-form {
+    padding: 16px 12px;
+    box-sizing: border-box;
+  }
+
+  .contact-highlight {
+    box-sizing: border-box;
+    padding: 14px;
+  }
+
+  .contact-items {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+
+  .contact-item-quick {
+    padding: 12px 10px;
+  }
+
+  .contact-item-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .contact-item div strong {
+    font-size: 0.6rem;
+    letter-spacing: 0.4px;
+  }
+
+  .contact-item div span {
+    font-size: 0.75rem;
+  }
+
+  .highlight-item {
+    gap: 12px;
+  }
+
+  .highlight-icon {
+    font-size: 1.6rem;
+    min-width: 32px;
+  }
+
+  .highlight-content h4 {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+
+  .highlight-content p {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .map-link {
+    font-size: 0.75rem;
+  }
+
+  .form-header {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+  }
+
+  .form-header h3 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .form-header p {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+  }
+
+  .form-benefits {
+    gap: 6px;
+  }
+
+  .benefit-item {
+    font-size: 0.75rem;
+    gap: 6px;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .form-group label {
+    font-size: 0.65rem;
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 6px;
+  }
+
+  .form-row {
+    gap: 12px;
+  }
+
+  .form-group textarea {
+    min-height: 60px;
+  }
+
+  .btn-whatsapp {
+    padding: 9px 18px;
+    font-size: 0.8rem;
+    margin-top: 20px;
+  }
+
+  .map-container {
+    margin-top: 24px;
+    border-radius: 12px;
+  }
+
+  .map-container iframe {
+    height: 220px;
+  }
+
+  .hours-status {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .hours-schedule {
+    font-size: 0.75rem;
   }
 }
 
