@@ -238,6 +238,7 @@ h3 {
 @media (max-width: 480px) {
   .container {
     padding: 0 16px;
+    box-sizing: border-box;
   }
 
   h1 {
@@ -251,6 +252,22 @@ h3 {
   .btn-lg {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* Extra Small Screens (< 380px) */
+@media (max-width: 379px) {
+  .container {
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
   }
 }
 
