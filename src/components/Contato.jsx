@@ -129,21 +129,6 @@ const Contato = () => {
 
         <div className="contato-grid">
           <div className="contato-info" data-animate="fade-left">
-            <div className="contact-highlight">
-              <div className="highlight-item">
-                <div className="highlight-icon">📍</div>
-                <div className="highlight-content">
-                  <h4>Nossa Localização</h4>
-                  <p>Av. Carlos Lindenberg, 2653<br/>Planalto, Vila Velha - ES</p>
-                  <a href="https://maps.google.com/?q=Av.+Carlos+Lindenberg,+2653+Vila+Velha" target="_blank" rel="noopener" className="map-link">
-                    Ver no mapa →
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <h3>Fale Conosco</h3>
-
             <div className="contact-items">
               <a href="tel:+5527998755751" className="contact-item contact-item-quick">
                 <div className="contact-item-icon">☎️</div>
@@ -160,15 +145,32 @@ const Contato = () => {
                   <span>(27) 99875-5751</span>
                 </div>
               </a>
+            </div>
 
-              <div className="contact-item contact-item-hours">
-                <div className="contact-item-icon">🕐</div>
-                <div>
-                  <strong>Atendimento</strong>
-                  <span className={`hours-status ${openStatus.isOpen ? 'open' : 'closed'}`}>
-                    {openStatus.message}
-                  </span>
-                  <span className="hours-schedule">Seg-Sex: 8h às 18h</span>
+            <div className="contact-highlight hours-highlight">
+              <div className="highlight-item">
+                <div className="highlight-icon">🕐</div>
+                <div className="highlight-content">
+                  <h4>Horário de Funcionamento</h4>
+                  <p>
+                    <span className={`hours-status ${openStatus.isOpen ? 'open' : 'closed'}`}>
+                      {openStatus.message}
+                    </span>
+                  </p>
+                  <p>Seg-Sex: 8h às 18h</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="contact-highlight">
+              <div className="highlight-item">
+                <div className="highlight-icon">📍</div>
+                <div className="highlight-content">
+                  <h4>Nossa Localização</h4>
+                  <p>Av. Carlos Lindenberg, 2653<br/>Planalto, Vila Velha - ES</p>
+                  <a href="https://maps.google.com/?q=Av.+Carlos+Lindenberg,+2653+Vila+Velha" target="_blank" rel="noopener" className="map-link">
+                    Ver no mapa →
+                  </a>
                 </div>
               </div>
             </div>
