@@ -1,14 +1,17 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, Suspense, lazy } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Sobre from './components/Sobre';
 import Servicos from './components/Servicos';
 import Stats from './components/Stats';
-import Diferenciais from './components/Diferenciais';
-import Depoimentos from './components/Depoimentos';
-import Contato from './components/Contato';
-import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
+
+// Lazy load components that are below the fold
+const Diferenciais = lazy(() => import('./components/Diferenciais'));
+const Depoimentos = lazy(() => import('./components/Depoimentos'));
+const Contato = lazy(() => import('./components/Contato'));
+const Footer = lazy(() => import('./components/Footer'));
+
 import './App.css';
 
 function App() {
@@ -61,11 +64,19 @@ function App() {
         <Sobre />
         <Servicos />
         <Stats />
-        <Diferenciais />
-        <Depoimentos />
-        <Contato />
+        <Suspense fallback={<div style={{ minHeight: '400px' }} />}>
+          <Diferenciais />
+        </Suspense>
+        <Suspense fallback={<div style={{ minHeight: '400px' }} />}>
+          <Depoimentos />
+        </Suspense>
+        <Suspense fallback={<div style={{ minHeight: '500px' }} />}>
+          <Contato />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={<div style={{ minHeight: '300px' }} />}>
+        <Footer />
+      </Suspense>
       <FloatingButtons />
     </>
   );
