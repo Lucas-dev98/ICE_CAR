@@ -15,7 +15,7 @@ const Footer = () => {
               <p>Especialistas em ar-condicionado automotivo há 21 anos. Qualidade, tecnologia e confiança para manter você sempre na temperatura ideal.</p>
               <div className="social-links">
                 <a href="#" aria-label="Facebook" title="Facebook">f</a>
-                <a href="#" aria-label="Instagram" title="Instagram">@</a>
+                <a href="https://www.instagram.com/jeferson.icecar/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">@</a>
                 <a href="#" aria-label="WhatsApp" title="WhatsApp">💬</a>
                 <a href="#" aria-label="Telefone" title="Telefone">☎️</a>
               </div>
@@ -63,7 +63,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
-          <p>© 2025 ICE CAR. Todos os direitos reservados.</p>
+          <p>© 2026 ICE CAR. Todos os direitos reservados.</p>
           <p>Desenvolvido com ❤️ para o melhor serviço automotivo</p>
         </div>
       </div>
