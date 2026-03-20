@@ -106,13 +106,13 @@ const Hero = () => {
           <div className="hero-info-card">
             <div className="info-card-row">
               <div className="info-card-stat">
-                <strong>5.000+</strong>
-                <span>Clientes</span>
+                <strong>21+</strong>
+                <span>Anos</span>
               </div>
               <div className="info-card-divider"></div>
               <div className="info-card-stat">
-                <strong>21+</strong>
-                <span>Anos</span>
+                <strong>5.000+</strong>
+                <span>Clientes</span>
               </div>
             </div>
 
