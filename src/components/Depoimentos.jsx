@@ -69,16 +69,6 @@ const Depoimentos = () => {
     return () => clearInterval(timer);
   }, [isAutoplay, depoimentos.length]);
 
-  const handlePrev = () => {
-    setIsAutoplay(false);
-    setCurrentIndex((prev) => (prev - 1 + depoimentos.length) % depoimentos.length);
-  };
-
-  const handleNext = () => {
-    setIsAutoplay(false);
-    setCurrentIndex((prev) => (prev + 1) % depoimentos.length);
-  };
-
   const handleDotClick = (idx) => {
     setIsAutoplay(false);
     setCurrentIndex(idx);
@@ -123,14 +113,6 @@ const Depoimentos = () => {
               )}
             </div>
           </div>
-
-          {/* Navigation Arrows */}
-          <button className="carousel-arrow carousel-prev" onClick={handlePrev} aria-label="Anterior">
-            ❮
-          </button>
-          <button className="carousel-arrow carousel-next" onClick={handleNext} aria-label="Próximo">
-            ❯
-          </button>
 
           {/* Dots Indicator */}
           <div className="carousel-dots">
