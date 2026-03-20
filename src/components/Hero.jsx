@@ -148,13 +148,10 @@ const Hero = () => {
             </div>
             <div className="hero-card-features">
               <div className="hero-feature">
-                ✓ Recarga de Gás R134a / R1234yf
-              </div>
-              <div className="hero-feature">
-                ✓ Manutenção Preventiva Completa
-              </div>
-              <div className="hero-feature">
                 ✓ Diagnóstico Digital Avançado
+              </div>
+              <div className="hero-feature">
+                ✓ Manutenção Preventiva
               </div>
               <div className="hero-feature">
                 ✓ Garantia em Todos os Serviços
