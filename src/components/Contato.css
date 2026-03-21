@@ -124,24 +124,24 @@
 
 .contact-item-quick:hover {
   border-color: #56CCF2;
-  background: linear-gradient(135deg, rgba(86, 204, 242, 0.15), rgba(86, 204, 242, 0.08));
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(47, 128, 237, 0.2);
+  background: linear-gradient(135deg, rgba(86, 204, 242, 0.2), rgba(86, 204, 242, 0.12));
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(47, 128, 237, 0.25);
 }
 
 .contact-item-quick:active {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(47, 128, 237, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(47, 128, 237, 0.18);
 }
 
 .contact-item-quick.contact-item-whatsapp:hover {
   border-color: #25D366;
-  background: linear-gradient(135deg, rgba(37, 211, 102, 0.15), rgba(37, 211, 102, 0.08));
-  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.25);
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.2), rgba(37, 211, 102, 0.12));
+  box-shadow: 0 16px 40px rgba(37, 211, 102, 0.3);
 }
 
 .contact-item-quick.contact-item-whatsapp:active {
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.15);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.2);
 }
 
 .contact-item-hours {
