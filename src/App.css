@@ -33,7 +33,6 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden;
   width: 100%;
 }
 
@@ -42,9 +41,7 @@ body {
   color: var(--text);
   background: var(--white);
   line-height: 1.7;
-  overflow-x: hidden;
   width: 100%;
-  max-width: 100vw;
   font-weight: 400;
 }
 
@@ -296,14 +293,14 @@ h3 {
 
   section {
     max-width: 100%;
-    overflow-x: hidden;
     width: 100%;
+    box-sizing: border-box;
   }
 
   main {
     max-width: 100%;
-    overflow-x: hidden;
     width: 100%;
+    box-sizing: border-box;
   }
 }
 

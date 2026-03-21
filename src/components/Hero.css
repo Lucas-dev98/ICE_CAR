@@ -4,11 +4,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  overflow-x: hidden;
   padding-top: 80px;
   width: 100%;
-  max-width: 100vw;
-  box-sizing: border-box;
 }
 
 .hero-bg {

@@ -3,9 +3,7 @@
   background: linear-gradient(180deg, #F8F9FC 0%, #EEF2F8 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
   width: 100%;
-  max-width: 100vw;
   box-sizing: border-box;
 }
 

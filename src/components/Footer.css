@@ -1,8 +1,6 @@
 .footer {
   background: #1E3A5F;
-  overflow-x: hidden;
   width: 100%;
-  max-width: 100vw;
   box-sizing: border-box;
 }
 
