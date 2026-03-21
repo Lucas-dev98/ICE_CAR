@@ -18,11 +18,24 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 968px) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
 .contato-info {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 18px;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .contato-info {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contato-info h3 {
