@@ -1,6 +1,6 @@
 .diferenciais {
   padding: 96px 0;
-  background: #F5F7FA;
+  background: linear-gradient(180deg, #F5F7FA 0%, #EEF1F7 100%);
   position: relative;
   overflow-x: hidden;
   width: 100%;

@@ -1,6 +1,6 @@
 .contato {
   padding: 96px 0;
-  background: #F5F7FA;
+  background: linear-gradient(180deg, #F8F9FC 0%, #EEF2F8 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
