@@ -119,6 +119,14 @@
 
 /* Mobile menu */
 @media (max-width: 768px) {
+  .logo-image {
+    height: 38px;
+  }
+
+  .nav-container {
+    gap: 16px;
+  }
+
   .nav-links {
     display: none !important;
   }
