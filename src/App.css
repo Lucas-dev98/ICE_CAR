@@ -108,7 +108,7 @@ h3 {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--secondary);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .section-label::before {
@@ -121,13 +121,13 @@ h3 {
 
 .section-header {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 80px;
 }
 
 .section-header p {
   font-size: 1.05rem;
   color: var(--text-muted);
-  margin-top: 12px;
+  margin-top: 16px;
   max-width: 580px;
   margin-left: auto;
   margin-right: auto;
