@@ -1053,7 +1053,22 @@
   }
 
   .contact-items {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .contact-item-quick {
+    padding: 24px 16px;
+    min-height: 140px;
+  }
+
+  .contact-item div strong {
+    font-size: 0.9rem;
+  }
+
+  .contact-item div span {
+    font-size: 1rem;
   }
 
   .contact-highlight {
