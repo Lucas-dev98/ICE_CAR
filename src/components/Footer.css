@@ -10,8 +10,8 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: clamp(36px, 5vw, 72px);
   align-items: start;
 }
 
@@ -161,9 +161,10 @@
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.95rem;
   line-height: 1.6;
+  font-weight: 500;
   margin: 0;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   transition: all 0.3s ease;
   cursor: pointer;
 }

@@ -129,11 +129,11 @@ const Contato = () => {
         <div className="contato-grid">
           <div className="contato-info" data-animate="fade-left">
             <div className="contact-items">
-              <a href="tel:+5527998755751" className="contact-item contact-item-quick">
+              <a href="tel:+552733599740" className="contact-item contact-item-quick">
                 <div className="contact-item-icon">☎️</div>
                 <div>
                   <strong>Ligue Agora</strong>
-                  <span>(27) 99875-5751</span>
+                  <span>☎ (27) 33599740</span>
                 </div>
               </a>
 

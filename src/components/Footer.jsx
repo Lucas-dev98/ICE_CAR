@@ -47,9 +47,11 @@ const Footer = () => {
                 </div>
                 <div className="contact-item">
                   <span className="contact-icon">☎️</span>
-                  <a href="https://wa.me/5527998755751" target="_blank" rel="noopener" className="contact-phone-link">
-                    (27) 99875-5751
-                  </a>
+                  <div>
+                    <a href="tel:+552733599740" className="contact-phone-link">
+                      Fixo: (27) 3359-9740
+                    </a>
+                  </div>
                 </div>
                 <div className="contact-item">
                   <span className="contact-icon">🕐</span>
