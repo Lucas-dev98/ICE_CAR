@@ -46,6 +46,14 @@
   transform: scale(1.1);
 }
 
+.whatsapp-float-icon {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+  position: relative;
+  z-index: 1;
+}
+
 .whatsapp-pulse {
   position: absolute;
   width: 58px;

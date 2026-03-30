@@ -78,6 +78,12 @@
   transition: all 0.3s ease;
 }
 
+.social-links a svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
 .social-links a:hover {
   background: #56CCF2;
   border-color: #56CCF2;
