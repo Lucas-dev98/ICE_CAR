@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const Depoimentos = () => {
   const particlesRef = useRef(null);
+  const dragStartX = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoplay, setIsAutoplay] = useState(true);
 
@@ -74,6 +75,41 @@ const Depoimentos = () => {
     setCurrentIndex(idx);
   };
 
+  const goToNext = () => {
+    setIsAutoplay(false);
+    setCurrentIndex((prev) => (prev + 1) % depoimentos.length);
+  };
+
+  const goToPrev = () => {
+    setIsAutoplay(false);
+    setCurrentIndex((prev) => (prev - 1 + depoimentos.length) % depoimentos.length);
+  };
+
+  const handlePointerDown = (e) => {
+    dragStartX.current = e.clientX;
+  };
+
+  const handlePointerUp = (e) => {
+    if (dragStartX.current === null) return;
+
+    const deltaX = e.clientX - dragStartX.current;
+    const minDragDistance = 45;
+
+    if (Math.abs(deltaX) >= minDragDistance) {
+      if (deltaX < 0) {
+        goToNext();
+      } else {
+        goToPrev();
+      }
+    }
+
+    dragStartX.current = null;
+  };
+
+  const handlePointerCancel = () => {
+    dragStartX.current = null;
+  };
+
   // Resume autoplay after 8 seconds of user interaction
   useEffect(() => {
     if (!isAutoplay) {
@@ -93,7 +129,13 @@ const Depoimentos = () => {
 
         <div className="testimonials-carousel">
           {/* Carousel Container */}
-          <div className="carousel-inner">
+          <div
+            className="carousel-inner"
+            onPointerDown={handlePointerDown}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerCancel}
+            onPointerLeave={handlePointerCancel}
+          >
             <div className="carousel-slide active">
               {depoimentos[currentIndex] && (
                 <div className="testimonial-card" data-animate="fade-up">

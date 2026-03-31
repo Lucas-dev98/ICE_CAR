@@ -36,8 +36,7 @@ const Servicos = () => {
     { id: 2, icon: '🔧', title: 'Manutenção Preventiva', desc: 'Revisão completa do sistema de ar-condicionado para evitar problemas futuros e garantir eficiência máxima no verão.', featured: true },
     { id: 3, icon: '💻', title: 'Diagnóstico Digital', desc: 'Análise computadorizada para identificação precisa de falhas no sistema de climatização, com laudo técnico detalhado.' },
     { id: 4, icon: '🌫️', title: 'Higienização', desc: 'Limpeza profunda do sistema de ar-condicionado, eliminando fungos, bactérias e mau odor para um ar mais saudável.' },
-    { id: 5, icon: '⚙️', title: 'Instalação', desc: 'Instalação de novos sistemas de ar-condicionado automotivo com garantia, suporte técnico e peças de qualidade.' },
-    { id: 6, icon: '🔘', title: 'Troca de Filtro', desc: 'Substituição do filtro de cabine para garantir ar limpo, filtrado e saudável no interior do seu veículo.' },
+    { id: 5, icon: '🔘', title: 'Troca de Filtro', desc: 'Substituição do filtro de cabine para garantir ar limpo, filtrado e saudável no interior do seu veículo.' },
   ];
 
   return (

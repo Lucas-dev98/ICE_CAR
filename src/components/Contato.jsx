@@ -259,7 +259,6 @@ const Contato = () => {
                   <option value="manutencao">Manutenção Preventiva</option>
                   <option value="diagnostico">Diagnóstico Digital</option>
                   <option value="higienizacao">Higienização</option>
-                  <option value="instalacao">Instalação</option>
                   <option value="filtro">Troca de Filtro</option>
                   <option value="outro">Outro</option>
                 </select>

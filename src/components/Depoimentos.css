@@ -22,6 +22,12 @@
   overflow: hidden;
   pointer-events: auto;
   height: auto;
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel-inner:active {
+  cursor: grabbing;
 }
 
 .carousel-slide {

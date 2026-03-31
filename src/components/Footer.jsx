@@ -34,7 +34,6 @@ const Footer = () => {
                 <li><a href="#servicos">Manutenção Preventiva</a></li>
                 <li><a href="#servicos">Diagnóstico Digital</a></li>
                 <li><a href="#servicos">Higienização</a></li>
-                <li><a href="#servicos">Instalação</a></li>
                 <li><a href="#servicos">Troca de Filtro</a></li>
               </ul>
             </div>
